@@ -5,15 +5,12 @@
     while (number > 0)
     {
         temp = number % 10;
-        if (temp != 0)
+       
         {
             multipl *= temp;
             number /= 10;
         }
-        else
-        {
-            number /= 10;
-        }
+        
     }
     return multipl;
 }
@@ -44,7 +41,7 @@ for (int i = 0; i < n; i++)
     while (interesNums[i] == 0)
     {
         randNum =  new Random().Next();
-        if (MultiplDigits(randNum) % SumDigits(randNum) == 0)
+        if (MultiplDigits(randNum) % SumDigits(randNum) == 0 && MultiplDigits(randNum) != 0)
         {
             interesNums[i] = randNum;
         }
